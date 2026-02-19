@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>LashLiftSist - Perawatan Bulu Mata</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <img src="logo.jpeg" alt="Logo Kiri" class="logo">
+    <div class="header-text">
+      <h1>LashLiftSist</h1>
+      <p>Jasa Perawatan & Kecantikan Bulu Mata</p>
+    </div>
+    <img src="logo.jpeg" alt="Logo Kanan" class="logo">
+  </div>
+</header>
+
+
+
+<section class="products">
+
+  <div class="product">
+    <img src="AfterNatural.jpeg" alt="Lashlift Natural">
+    <h3>Lashlift Natural</h3>
+    <p>Rp 50.000</p>
+    <button onclick="showDetail(0)">Lihat Detail</button>
+  </div>
+
+  <div class="product">
+    <img src="LashliftPremium.jpeg" alt="Lashlift Premium">
+    <h3>Lashlift Premium</h3>
+    <p>Rp 75.000</p>
+    <button onclick="showDetail(1)">Lihat Detail</button>
+  </div>
+
+  <div class="product">
+    <img src="Serum.jpeg" alt="Serum Penumbuh Bulu Mata">
+    <h3>Serum Penumbuh Bulu Mata</h3>
+    <p>Rp 35.000</p>
+    <button onclick="showDetail(2)">Lihat Detail</button>
+  </div>
+
+</section>
+
+
+
+<!-- MODAL DETAIL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2 id="detail-name"></h2>
+    <p id="detail-price"></p>
+    <p id="detail-description"></p>
+
+    <p><strong>Manfaat:</strong></p>
+    <ul id="detail-benefits"></ul>
+
+    <p><strong>Cara Pakai:</strong></p>
+    <p id="detail-usage"></p>
+
+    <!-- Before & After -->
+    <div id="before-after" style="display:none;">
+      <h4>Before & After :</h4>
+      <div class="ba-container">
+        <div>
+          <p><strong>Before</strong></p>
+          <img id="before-img">
+        </div>
+        <div>
+          <p><strong>After</strong></p>
+          <img id="after-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- Tombol keranjang bawah modal -->
+    <div id="add-cart-bottom" style="text-align:center; margin-top:20px;">
+      <button id="add-to-cart-btn-bottom">Tambah ke Keranjang</button>
+    </div>
+  </div>
+</div>
+
+
+<section class="cart">
+  <h2>Keranjang</h2>
+  <ul id="cart-list"></ul>
+  <h3>Total: Rp <span id="total">0</span></h3>
+  <button onclick="checkout()">Checkout via WhatsApp</button>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
